@@ -14,7 +14,6 @@ def get_news_list(request):
     res['num']=models.head_num.objects.all().first().num
     return JsonResponse(json.dumps(res))
 
-
 def submit_news(request):
     token=request.POST['token']
     res={
